@@ -29,10 +29,7 @@ def get_calibration_wih_written_numbers(full_text):
         return 0
     elif size == 1:
         value = result[0][1]
-        if value in nums:
-            return int(value)
-        else:
-            return list(numbers.keys())[list(numbers.values()).index(value)]
+        return get_written_number(value)
     elif size == 2:
         return
     else:
